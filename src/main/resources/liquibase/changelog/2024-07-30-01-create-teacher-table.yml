@@ -1,0 +1,40 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-07-30-01-create-teacher-table
+      author: Nihad Mirzezade
+      changes:
+        - createTable:
+            catalogName: teacher
+            schemaName: public
+            tableName: teacher
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  remarks: id column of the student table
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: PK_teacher
+
+              - column:
+                  name: name
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: surname
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: lesson_count
+                  type: number
+                  remarks: Lesson count
+                  constraints:
+                    nullable: false
+
+
+
+
+

@@ -1,0 +1,54 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-07-06-02-insert-lesson-data
+      author: Nihad Mirzezade
+      changes:
+        - insert:
+            tableName: lesson
+            schemaName: public
+            columns:
+              - column:
+                  name: title
+                  value: "FrontEnd"
+              - column:
+                  name: is_active
+                  value: true
+              - column:
+                  name: created_at
+                  valueComputed: "now()"
+              - column:
+                  name: updated_at
+                  valueComputed: "now()"
+        - insert:
+            tableName: lesson
+            schemaName: public
+            columns:
+              - column:
+                  name: title
+                  value: " BackEnd "
+              - column:
+                  name: is_active
+                  value: true
+              - column:
+                  name: created_at
+                  valueComputed: "now()"
+              - column:
+                  name: updated_at
+                  valueComputed: "now()"
+
+        - insert:
+            tableName: lesson
+            schemaName: public
+            columns:
+              - column:
+                  name: title
+                  value: "Data Analytics"
+              - column:
+                  name: is_active
+                  value: true
+              - column:
+                  name: created_at
+                  valueComputed: "now()"
+              - column:
+                  name: updated_at
+                  valueComputed: "now()"

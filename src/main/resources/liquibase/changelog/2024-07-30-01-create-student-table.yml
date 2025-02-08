@@ -1,0 +1,43 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-07-30-01-create-student-table
+      author: Nihad Mirzezade
+      changes:
+        - createTable:
+            catalogName: student
+            schemaName: public
+            tableName: student
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  remarks: id column of the student table
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: Pk_student
+
+              - column:
+                  name: name
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: surname
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: address
+                  type: VARCHAR(150)
+              - column:
+                  name: phone_number
+                  type: VARCHAR(150)
+                  constraints:
+                    nullable: false
+
+
+
+
+
+

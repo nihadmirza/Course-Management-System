@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2024-07-30-01-create-lesson-table
+      author: Nihad Mirzezade
+      changes:
+        - createTable:
+            catalogName: lesson
+            columns:
+              - column:
+                  name: id
+                  type: SERIAL
+                  remarks: id column of the student table
+                  constraints:
+                    nullable: false
+                    primaryKey: true
+                    primaryKeyName: Pk_Students
+
+              - column:
+                  name: title
+                  type: VARCHAR(150)
+                  remarks: Lesson title
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: is_active
+                  type: Boolean
+                  defaultValue: true
+
+              - column:
+                  name: created_at
+                  type: TIMESTAMP(6)
+                  constraints:
+                    nullable: false
+
+              - column:
+                  name: updated_at
+                  type: TIMESTAMP(6)
+
+
+            schemaName: public
+            tableName: lesson
+
+
